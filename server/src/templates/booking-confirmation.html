@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; color: #333; }
+    .card { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 8px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .header { font-size: 22px; font-weight: bold; color: #059669; margin-bottom: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+    .details { background: #f8fafc; border-left: 4px solid #10b981; padding: 15px; margin: 20px 0; border-radius: 4px; }
+    .item { margin-bottom: 8px; font-size: 14px; }
+    .label { font-weight: bold; color: #334155; }
+    .footer { margin-top: 30px; font-size: 12px; color: #94a3b8; text-align: center; border-top: 1px solid #f1f5f9; padding-top: 15px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">✓ Booking Confirmed</div>
+    <div class="content">
+      <p>Hello {{userName}},</p>
+      <p>Your campus resource reservation has been confirmed.</p>
+      <div class="details">
+        <div class="item"><span class="label">Booking Ref:</span> {{bookingId}}</div>
+        <div class="item"><span class="label">Resource:</span> {{resourceName}} ({{resourceCategory}})</div>
+        <div class="item"><span class="label">Location:</span> {{resourceLocation}}</div>
+        <div class="item"><span class="label">Date & Time (IST):</span> {{formattedDate}} | {{startsAt}} – {{endsAt}}</div>
+        <div class="item"><span class="label">Purpose:</span> {{purpose}}</div>
+      </div>
+      <p>Please make sure to arrive on time and follow all posted resource guidelines.</p>
+    </div>
+    <div class="footer">
+      Campus Resource Management System &bull; Asia/Kolkata Timezone
+    </div>
+  </div>
+</body>
+</html>

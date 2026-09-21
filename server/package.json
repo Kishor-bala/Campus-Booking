@@ -1,0 +1,31 @@
+{
+  "name": "campus-resource-booking-server",
+  "version": "1.0.0",
+  "description": "Express 5 Backend for Campus Resource Booking System",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "db:migrate": "node-pg-migrate up -m migrations",
+    "db:seed": "node scripts/seed.js"
+  },
+  "dependencies": {
+    "argon2": "^0.45.1",
+    "connect-pg-simple": "^10.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^5.0.1",
+    "express-session": "^1.18.1",
+    "handlebars": "^4.7.9",
+    "helmet": "^8.0.0",
+    "node-pg-migrate": "^7.9.0",
+    "nodemailer": "^10.0.10",
+    "pg": "^8.13.1",
+    "pino": "^9.6.0",
+    "pino-http": "^10.4.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
