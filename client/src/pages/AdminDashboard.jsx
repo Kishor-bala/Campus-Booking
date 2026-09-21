@@ -445,7 +445,11 @@ export const AdminDashboard = () => {
                           {slot.isOpen ? 'Open' : 'Closed'}
                         </span>
                       </td>
-                      <td>{slot.state.toUpperCase()}</td>
+                      <td>
+                        <span className={`status-pill pill-${slot.state.toLowerCase()}`}>
+                          {slot.state.toUpperCase()}
+                        </span>
+                      </td>
                       <td>
                         <button onClick={() => handleToggleSlotOpen(slot)} className="btn-secondary-sm">
                           {slot.isOpen ? 'Close Slot' : 'Open Slot'}

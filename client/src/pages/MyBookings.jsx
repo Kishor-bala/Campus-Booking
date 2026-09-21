@@ -105,12 +105,12 @@ export const MyBookings = () => {
                 </span>
               </div>
 
-              <div className="booking-details font-mono text-xs">
+              <div className="booking-details">
                 <div>📍 <strong>Location:</strong> {b.resource.location}</div>
                 <div>📅 <strong>Date:</strong> {formatDateReadable(b.slot.bookingDate)}</div>
                 <div>🕒 <strong>Time (IST):</strong> Slot #{b.slot.slotIndex + 1} ({formatSlotWindow(b.slot.startsAt, b.slot.endsAt)})</div>
                 <div>📝 <strong>Purpose:</strong> {b.purpose}</div>
-                <div>🔖 <strong>Reference ID:</strong> {b.id}</div>
+                <div>🔖 <strong>Reference:</strong> <code className="booking-ref-code">{b.id}</code></div>
                 {b.cancellationReason && (
                   <div className="cancellation-reason">
                     <strong>Cancellation Reason:</strong> {b.cancellationReason}
